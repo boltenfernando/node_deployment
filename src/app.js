@@ -16,7 +16,7 @@ const port = process.env.PORT  || 3000;
 const app = express();
 
 // connection to db
-mongoose.connect(process.env.DB_URL)
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true })
   .then(db => console.log('db connected'))
   .catch(err => console.log(err));
 
